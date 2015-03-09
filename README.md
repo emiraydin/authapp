@@ -2,8 +2,10 @@ authapp
 ===
 Simple authentication app built with Node.js
 
+
 ## Setup Instructions
 
+### 1. Config File
 To run this application, `config/app.js` needs to be created with below contents. Fill in the variables with your information accordingly.
 
 ```javascript
@@ -27,11 +29,18 @@ module.exports = {
 
 ```
 
+### 2. Database Setup
+
+This app uses [MongoDB](https://www.mongodb.org/) as its database service. So you can either install MongoDB locally or use a service like [Mongolab](https://mongolab.com/) to get MongoDB storage on the cloud.
+
+Whatever option you choose, make sure you update `MONGO_DB_URI` variable in your `config/app.js`.
+
+
 ## How To Run
 
 * After cloning this repository, `cd` into it and run `npm install` command.
 * Then, you can run `npm start` command to run the server.
-* Finally, you can access the site on your browser at http://localhost:3000
+* Finally, you can access the site on your browser at http://localhost:3000/
 
 
 ## Demo
