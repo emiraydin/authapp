@@ -87,19 +87,20 @@ userSchema.statics.activateAccount = function(activationCode, callback) {
     User.findOne({'activationCode': activationCode}, function(err, user) {
         if (err) callback(err, false);
 
-        if (!user) callback(err, false);
-
-        // If the user is found and is not active and given activation code matches
-        if (!user.active && user.activationCode == activationCode) {
-            // Activate the user and save
-            user.active = true;
-            user.save(function(err) {
-                if (err) callback(err, false);
-                callback(err, user);
-            });
+        if (!user) {
+            callback(err, false);
         } else {
-            // The user exists and is active or activation codes don't match
-            callback(null, false);
+            // If the user is found and is not active and given activation code matches
+            if (!user.active && user.activationCode == activationCode) {
+                // Activate the user and save
+                user.active = true;
+                user.save(function(err) {
+                    if (err) callback(err, false);
+                    callback(err, user);
+                });
+            } else {
+                callback(err, false);
+            }     
         }
     });
 };
