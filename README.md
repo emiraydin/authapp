@@ -2,6 +2,13 @@ authapp
 ===
 Simple authentication app built with Node.js
 
+## Features
+* Register new user
+* Sign in registered user
+* Sign in / sign up with Facebook & Google
+* Account activation via email confirmation link
+* Send welcome email
+* Forgot Password / Reset Password
 
 ## Setup Instructions
 
