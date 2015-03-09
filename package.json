@@ -1,6 +1,6 @@
 {
-  "name": "loginapp",
-  "version": "0.0.0",
+  "name": "authapp",
+  "version": "1.2.1",
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
