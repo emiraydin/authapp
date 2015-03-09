@@ -52,7 +52,7 @@ Whatever option you choose, make sure you update `MONGO_DB_URI` variable in your
 
 ## Demo
 
-A running demo is deployed at http://pure-garden-7297.herokuapp.com/
+A running demo is deployed at https://theauthapp.herokuapp.com/
 
 
 ## Tools Used
