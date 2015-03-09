@@ -1,0 +1,31 @@
+extends layout
+
+block content
+
+  div.ui.grid
+    div.ui.inverted.fixed.large.menu.navbar.page.grid
+      div.item Emir's Login App
+      div.right.menu
+        a.item(href="/logout") Logout
+
+  div.ui.page.grid
+    div.row
+    div.row
+      div.column.padding-reset
+        div.ui.large.message
+          h1.ui.huge.header Welcome!
+          table.ui.definition.table
+            tbody
+              tr
+                td
+                  i.user.icon
+                  strong Name
+                td #{user.username}
+              tr
+                td
+                  i.mail.icon
+                  strong Email
+                td #{user.email}
+
+          p You are now logged in.
+          p Click on "Logout" button on the top right if you want to sign out.

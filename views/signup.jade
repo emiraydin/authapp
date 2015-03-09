@@ -1,0 +1,40 @@
+div.column
+	div.ui.raised.segment.signup
+		h2.ui.inverted.white.block.huge.header Sign Up
+		include ./message
+		div.ui.black.stacked.segment
+			form.ui.form(class='form-signup', action='/signup', method='POST')
+				div.ui.error.message
+				div.field
+					// Username
+					div.ui.left.icon.large.input
+						input(name="username", type="text", placeholder="Your Name")
+						i.user.icon
+						div.ui.corner.label
+							i.asterisk.icon
+				div.field
+					// Email
+					div.ui.left.icon.large.input
+						input(name="email", type="text", placeholder="Your Email")
+						i.mail.icon
+						div.ui.corner.label
+							i.asterisk.icon
+				div.field
+					// Password
+					div.ui.left.icon.large.input
+						input(name="password", type="password", placeholder="Enter Password")
+						i.lock.icon
+						div.ui.corner.label
+							i.asterisk.icon
+				div.field
+					// Confirm Password
+					div.ui.left.icon.large.input
+						input(name="confirm-password", type="password", placeholder="Confirm Password")
+						i.lock.icon
+						div.ui.corner.label
+							i.asterisk.icon
+				button.ui.red.submit.large.button(type="submit") Sign Up
+		div.ui.divider
+		div.ui.footer
+			div.text Already Registered?
+			a.ui.green.button.signup(href="/") Sign In

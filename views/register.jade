@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	div.ui.grid
+		// Computers and tablets
+		div.computer.tablet.only.row
+			div.ui.two.column.centered.grid#signup
+				include ./signup
+		// Mobile devices
+		div.mobile.only.row
+			div.ui.one.column.centered.grid#signup
+				include ./signup

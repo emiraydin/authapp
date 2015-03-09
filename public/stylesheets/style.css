@@ -1,0 +1,16 @@
+body {
+	overflow-x: hidden;
+}
+
+#signin, #signup {
+	margin-top: 5%;
+}
+
+.footer {
+	text-align: center;
+}
+
+.text {
+	display: inline;
+	padding-right: 10px;
+}

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	div.ui.page.grid
+		div.row
+		div.row
+			div.column.padding-reset
+				div.ui.large.message
+					h1.ui.huge.header
+						i.huge.warning.sign.icon
+						div.content #{error.status}: #{message}
+							div.sub.header The page you're looking for could not be found.
+					a.ui.large.red.button(href="/") Go To Homepage

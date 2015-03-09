@@ -1,0 +1,36 @@
+div.column
+	div.ui.raised.segment.signin
+		h2.ui.inverted.white.block.huge.header Log In
+		include ./message
+		div.ui.black.stacked.segment
+			// Login form
+			form.ui.form(class='form-signin', action='/login', method='POST')
+				div.field
+					div.ui.left.icon.huge.input
+						input(name="email", type="text", placeholder="Your Email")
+						i.user.icon
+				div.field
+					div.ui.left.icon.huge.input
+						input(name="password", type="password", placeholder="Your Password")
+						i.lock.icon
+				button.ui.red.submit.huge.button(type="submit") Sign In
+
+		div.ui.horizontal.divider  OR
+		div.center.aligned.column
+			// Facebook & Google login buttons
+			div.ui.padded.center.aligned.grid
+					a.ui.facebook.large.button(href="/auth/facebook")
+						i.facebook.icon
+						| Sign In With Facebook
+					a.ui.google.plus.large.button(href="/auth/google")
+						i.google.icon
+						| Sign In With Google
+
+		div.ui.divider
+		div.ui.footer
+			div.text
+				strong Not Registered?
+			div.ui.buttons
+				a.ui.positive.large.button(href="/register") Sign Up Here
+				div.or
+				a.ui.large.button(href="/user/forgotpassword") Forgot Password
